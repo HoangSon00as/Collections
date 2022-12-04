@@ -18,6 +18,11 @@ public class RegisterServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String raw_username = req.getParameter("username");
+        String raw_password = req.getParameter("password");
+        
+        resp.getWriter().println("username: "+raw_username);
+        resp.getWriter().println("password: "+raw_password);
         
     }
 
